@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --main-font: "Karla", sans-serif;
+  --font-size: 16px;
+  --cyan: #2ab2af;
+  --light-cyan: #4bcfcd;
+  --bright-yellow: #c0df34;
+  --light-Gray: #e5eff5;
+  --grayish-blue: #98a6bd;
+  --white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--main-font);
+}
+
+body {
+  background-color: var(--light-Gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 1000px;
+}
+
+/* single-price-grid */
+.single-price-grid {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  padding: 1.7rem 1.5rem;
+  width: 100%;
+}
+
+.single-price-grid .col-1 {
+  background-color: var(--white);
+  padding: 2rem 1.5rem;
+}
+
+.single-price-grid .col-2 {
+  background-color: var(--cyan);
+}
+
+.single-price-grid .col-3 {
+  background-color: var(--light-cyan);
+}
+
+.join-community-heading {
+  color: var(--cyan);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+.join-community-subheading {
+  color: var(--bright-yellow);
+  font-size: 1rem;
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+.join-community-description {
+  color: var(--grayish-blue);
+  line-height: 1.5;
+  width: 90%;
+}
+
+.monthly-subscription-heading {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  width: 90%;
+  color: var(--light-Gray);
+}
+
+.monthly-subscription-price {
+  color: var(--light-Gray);
+  font-size: 1rem;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.monthly-subscription-price .price {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.monthly-subscription-price span.per-time {
+  color: var(--light-cyan);
+  position: relative;
+  bottom: 7px;
+  left: 10px;
+}
+
+.monthly-subscription-description {
+  color: var(--light-Gray);
+  font-weight: lighter;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--bright-yellow);
+  color: var(--light-Gray);
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: -1px 11px 28px -5px rgba(0, 0, 0, 0.58);
+  box-shadow: -1px 11px 28px -5px rgba(0, 0, 0, 0.58);
+  margin-top: 0.7rem;
+}
+
+.why-us-heading {
+  color: var(--light-Gray);
+  margin-bottom: 22px;
+}
+
+.why-us-description {
+  color: var(--light-Gray);
+  width: 68%;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 300px) {
+  /* single-price-grid */
+  .single-price-grid {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .single-price-grid {
+    width: 90%;
+    flex-direction: row;
+  }
+  .col-2,
+  .col-3 {
+    width: 50%;
+    padding: 2rem 3rem;
+  }
+}
